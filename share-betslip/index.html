@@ -2867,7 +2867,7 @@ function format2dp(value) {
                           ];
                      const score = String(value);
                         
-                          return blockedResults.includes(score) ?  "Other" : score;
+                          return blockedResults.includes(score) ? score : "Other";
                         }
             // const result = 2.0
             // ${checkResult(match.full_time_score)}
