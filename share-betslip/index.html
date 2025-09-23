@@ -2856,22 +2856,26 @@ function format2dp(value) {
 // ${match.bet_details.odds.maximumFractionDigits(2).minimumFractionDigits(2)}
             // Display matches
 
-function checkResult(value) {
-  // Orodha ya matokeo ambayo hayapaswi kuonyeshwa
-  const blockedResults = [
-    "1-2", "1-0", "1-1", "2-0", "3-0",
-    "4-0", "5-0", "4-1", "3-1", "3-2", "2-2",
-    "0-1", "0-2", "0-3", "1-4", "1-5",
-    "5-1", "2-1", "2-3"
-  ];
 
-  return blockedResults.includes(value) ? value : "Other";
-}
 
             const matchesContainer = document.getElementById("match_container");
             matchesContainer.innerHTML = "";
             bet.matches.forEach((match, idx) => {
                 const matchDiv = document.createElement("div");
+
+                function checkResult(value) {
+                          // Orodha ya matokeo ambayo hayapaswi kuonyeshwa
+                          const blockedResults = [
+                            "1-2", "1-0", "1-1", "2-0", "3-0",
+                            "4-0", "5-0", "4-1", "3-1", "3-2", "2-2",
+                            "0-1", "0-2", "0-3", "1-4", "1-5",
+                            "5-1", "2-1", "2-3"
+                          ];
+                        
+                          return blockedResults.includes(value) ? value : "Other";
+                        }
+
+                
                 matchDiv.className = "event";
                 matchDiv.innerHTML = `
                     <div data-v-21ea927d="" class="event-line event-header">
