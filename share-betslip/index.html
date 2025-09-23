@@ -2877,7 +2877,7 @@ function format2dp(value) {
             bet.matches.forEach((match, idx) => {
                 const matchDiv = document.createElement("div");
 
-               
+                console.log("Checking score:", match.full_time_score, "->", checkResult(match.full_time_score));
                 matchDiv.className = "event";
                 matchDiv.innerHTML = `
                     <div data-v-21ea927d="" class="event-line event-header">
