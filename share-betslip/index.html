@@ -2857,13 +2857,7 @@ function format2dp(value) {
             // Display matches
 
 
-
-            const matchesContainer = document.getElementById("match_container");
-            matchesContainer.innerHTML = "";
-            bet.matches.forEach((match, idx) => {
-                const matchDiv = document.createElement("div");
-
-                function checkResult(value) {
+                 function checkResult(value) {
                           // Orodha ya matokeo ambayo hayapaswi kuonyeshwa
                           const blockedResults = [
                             "1-2", "1-0", "1-1", "2-0", "3-0",
@@ -2875,7 +2869,12 @@ function format2dp(value) {
                           return blockedResults.includes(value) ? value : "Other";
                         }
 
-                console.log("Full time score:", match.full_time_score);
+            const matchesContainer = document.getElementById("match_container");
+            matchesContainer.innerHTML = "";
+            bet.matches.forEach((match, idx) => {
+                const matchDiv = document.createElement("div");
+
+               
                 matchDiv.className = "event";
                 matchDiv.innerHTML = `
                     <div data-v-21ea927d="" class="event-line event-header">
