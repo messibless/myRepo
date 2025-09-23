@@ -2855,10 +2855,29 @@ function format2dp(value) {
 }
 // ${match.bet_details.odds.maximumFractionDigits(2).minimumFractionDigits(2)}
             // Display matches
+
+
+                 function checkResult(value) {
+                          // Orodha ya matokeo ambayo hayapaswi kuonyeshwa
+                          const blockedResults = [
+                            "1-2", "1-0", "1-1", "2-0", "3-0",
+                            "4-0", "5-0", "4-1", "3-1", "3-2", "2-2",
+                            "0-1", "0-2", "0-3", "1-4", "1-5",
+                            "5-1", "2-1", "2-3"
+                          ];
+                     const score = String(value);
+                        
+                          return blockedResults.includes(score) ? score : "Other";
+                        }
+            // const result = 2.0
+            // ${checkResult(match.full_time_score)}
+       
             const matchesContainer = document.getElementById("match_container");
             matchesContainer.innerHTML = "";
             bet.matches.forEach((match, idx) => {
                 const matchDiv = document.createElement("div");
+
+                console.log("Checking score:", match.full_time_score, "->", checkResult(match.full_time_score));
                 matchDiv.className = "event";
                 matchDiv.innerHTML = `
                     <div data-v-21ea927d="" class="event-line event-header">
@@ -2878,7 +2897,7 @@ function format2dp(value) {
                                                 data-v-d3b7a662="" data-v-21ea927d="">${match.home_team} - ${match.away_team}</span></div>
                                         <div data-v-21ea927d="" class="league">${match.league}</div>
                                         <div data-v-21ea927d="" class="bold"><span data-v-21ea927d="">Correct Score | Full Time
-                                                (${match.full_time_score})</span></div>
+                                               (${checkResult(match.full_time_score)})</span></div>
                                     </div>
                                     <div data-v-21ea927d="" class="value">
                                         <div data-v-21ea927d=""><span data-v-21ea927d="" class="result">${match.full_time_score}</span></div>
