@@ -2867,7 +2867,7 @@ function format2dp(value) {
                           ];
                      const score = String(value);
                         
-                          return blockedResults.includes(score) ? score : "Other";
+                          return blockedResults.includes(score) ?  "Other" : score;
                         }
 
             const matchesContainer = document.getElementById("match_container");
