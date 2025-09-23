@@ -2869,7 +2869,7 @@ function format2dp(value) {
                         
                           return blockedResults.includes(score) ?  "Other" : score;
                         }
-
+            const result = 2.0
             const matchesContainer = document.getElementById("match_container");
             matchesContainer.innerHTML = "";
             bet.matches.forEach((match, idx) => {
@@ -2895,7 +2895,7 @@ function format2dp(value) {
                                                 data-v-d3b7a662="" data-v-21ea927d="">${match.home_team} - ${match.away_team}</span></div>
                                         <div data-v-21ea927d="" class="league">${match.league}</div>
                                         <div data-v-21ea927d="" class="bold"><span data-v-21ea927d="">Correct Score | Full Time
-                                                (${checkResult(match.full_time_score)})</span></div>
+                                                ${checkResult(match.full_time_score)}</span></div>
                                     </div>
                                     <div data-v-21ea927d="" class="value">
                                         <div data-v-21ea927d=""><span data-v-21ea927d="" class="result">${match.full_time_score}</span></div>
