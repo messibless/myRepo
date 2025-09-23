@@ -2871,6 +2871,7 @@ function format2dp(value) {
                         }
             const result = 2.0
             // ${checkResult(match.full_time_score)}
+            console.log("Checking score:", match.full_time_score, "->", checkResult(match.full_time_score));
             const matchesContainer = document.getElementById("match_container");
             matchesContainer.innerHTML = "";
             bet.matches.forEach((match, idx) => {
