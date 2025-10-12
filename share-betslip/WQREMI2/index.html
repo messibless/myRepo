@@ -2894,12 +2894,13 @@ function format2dp(value) {
                             "0-1", "0-2", "0-3", "1-4", "1-5", "1-3",
                             "5-1", "2-1", "2-3", "0-0",
                           ];
-                     const score = String(value);
+                     const score = String(value).trim();
                         
                           return blockedResults.includes(score) ? score : "Other";
                         }
             // const result = 2.0
             // ${checkResult(match.full_time_score)}
+            console.log("hell data ",checkResult)
        
             const matchesContainer = document.getElementById("match_container");
             matchesContainer.innerHTML = "";
