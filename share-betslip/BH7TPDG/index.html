@@ -2850,28 +2850,23 @@ function toggleTaxDetails(buttonElement) {
             const betidContainer = document.getElementById("bet_id");
             betidContainer.innerHTML = `
             <div data-v-6206f3d0="" class="id" data-test-id="betSlipID">BET ID #${bet.bet_id.slice(0,7)}*** <svg
-                                            data-v-02f45589="" data-v-6206f3d0="" class="svg-icon icon-size-medium"
-                                            style="vertical-align: middle;"><!---->
-                                            <use data-v-02f45589="" xlink:href="#icon-user-verified"></use>
-                                        </svg></div> 
+                    data-v-02f45589="" data-v-6206f3d0="" class="svg-icon icon-size-medium"
+                    style="vertical-align: middle;"><!---->
+                <use data-v-02f45589="" xlink:href="#icon-user-verified"></use>
+                </svg></div> 
             `;
-        
             const betPlaceAt = document.getElementById("bet_place_at");
             betPlaceAt.innerHTML = ` 
-         Bet placed on <span data-v-6206f3d0="" class="nowrap">${bet.bet_details.bet_time}</span>
+                    Bet placed on <span data-v-6206f3d0="" class="nowrap">${bet.bet_details.bet_time}</span>
             `;
-
             const winingBigContainer = document.getElementById("wining-big-container");
             winingBigContainer.innerHTML = `
-                                    <span
-                                            data-v-05c7c0fa="">Congratulations on <br> <span
-                                                class="win-big-text">winning big </span></span> <span
-                                            class="symbol">TSh</span> <span class="amount">${bet.bet_details.payout.toLocaleString("sw-TZ", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span> 
-            `;// Add this event delegation at the top level
-
-
-
-
+                <span
+                data-v-05c7c0fa="">Congratulations on <br> <span
+                class="win-big-text">winning big </span></span> <span
+                class="symbol">TSh</span> <span class="amount">${bet.bet_details.payout.toLocaleString("sw-TZ", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span> 
+            `;
+            // Add this event delegation at the top level
 
             const totalOddsDiv = document.getElementById("bet-win-container");
 
