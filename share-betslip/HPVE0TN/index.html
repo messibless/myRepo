@@ -2965,7 +2965,8 @@ function toggleTaxDetails(buttonElement) {
                           ];
                      const score = String(value);
                         
-                          return blockedResults.includes(score) ? score : "Other";
+                        //   return blockedResults.includes(score) ? score : "Other";
+                        return blockedResults.includes(score) ? "Other" : score;
                         }
 
             // Display matches
