@@ -18,22 +18,13 @@ body {
     background: var(--app-fixed-size-background, #293136);
     font-weight: 400;
     line-height: 1.4;
-    /* font-family: 'Helvetica', 'Arial', sans-serif; */
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+
     text-rendering: optimizeLegibility;
     font: 100% Roboto-flex, Helvetica, Arial, sans-serif;
   
 }
 
-/* color: #252a2d;
-background: var(--app-fixed-size-background, #293136);
-font-weight: 400;
-line-height: 1.4; */
 
-/* .vue-app {
-    background: #252a2d;
-  
-} */
 #app, .vue-app {
     flex-direction: column;
     background: #252a2d;
@@ -1593,18 +1584,7 @@ img[data-v-1f7f90db] {
         }
  
         
-        /* .bottom-navigation[data-v-09c73580] {
-            height: 65px;
-            top: calc(100% - 65px);
-        }
-        .bottom-navigation .progress-bar-text[data-v-09c73580] {
-            height: 65px;
-            padding: 0 8px;
-            font-size: 10px;
-        }
-        .bottom-navigation .navigation-menu[data-v-09c73580] {
-            height: 65px;
-        } */
+    
         
     }
     @media screen and (min-width: 960px) {
